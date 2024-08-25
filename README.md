@@ -20,6 +20,7 @@ N:\Msys2x64\msys2_shell.cmd  -full-path -mingw32
 ```
 $ which -a cl
 /d/ProgramsX86/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX86/x86/cl
+```
 
 - パスを設定し MSYS の /usr/bin/link
   ではなく VS の link コマンドが使われるようにする
@@ -37,9 +38,10 @@ which -a link
 ##  4.  ビルド
 
 ```
-cd /path/to/workdir
+pushd /path/to/workdir
 mkdir -p ffmpeg
 cd ffmpeg
-/path/to/sourcedir/ffmpeg/configure  --prefix=.  --disable-shared --enable-static --enable-gpl --enable-version3  --toolchain=msvc
-time make
+time  /path/to/sourcedir/ffmpeg/configure  --prefix=.  --disable-shared --enable-static --enable-gpl --enable-version3  --toolchain=msvc
+time  make
+popd
 ```
