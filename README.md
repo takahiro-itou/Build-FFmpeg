@@ -19,14 +19,14 @@ N:\Msys2x64\msys2_shell.cmd  -full-path -mingw32
 
 ```
 $ which -a cl
-/d/ProgramsX86/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX86/x86/cl
+/d/ProgramsX86/VisualStudio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX86/x86/cl
 ```
 
 - パスを設定し MSYS の /usr/bin/link
   ではなく VS の link コマンドが使われるようにする
 
 ```
-export PATH="/d/ProgramsX86/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX86/x86:${PATH}"
+export PATH="/d/ProgramsX86/VisualStudio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX86/x86:${PATH}"
 ```
 
 - 設定されたか確認
