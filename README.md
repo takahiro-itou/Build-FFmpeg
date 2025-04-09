@@ -41,7 +41,8 @@ which -a link
 pushd /path/to/workdir
 mkdir -p ffmpeg
 cd ffmpeg
-time  /path/to/sourcedir/ffmpeg/configure  --prefix=.  --disable-shared --enable-static --enable-gpl --enable-version3  --toolchain=msvc
+# time  /path/to/sourcedir/ffmpeg/configure  --prefix=.  --disable-shared --enable-static --enable-gpl --enable-version3  --toolchain=msvc
+time  /path/to/sourcedir/ffmpeg/configure  --enable-shared --enable-static --enable-gpl --enable-version3 --toolchain=msvc --prefix=ffmpeg-7.0.2-win32-shared
 time  make
 popd
 ```
